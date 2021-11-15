@@ -1,0 +1,49 @@
+@startuml
+
+        Class Main {
+        main()
+        start()
+        }
+
+        Class Controller {
+
+        }
+
+        Class ItemList {
+        itemArray[]
+        addItem()
+        removeItem()
+        clearItems()
+        displayAllItems()
+        displayCompleteItems()
+        displayIncompleteItems()
+        saveItems()
+        loadItems()
+        }
+
+        Class Item {
+        String itemTitle
+        editItemTitle()
+        }
+
+        Class Description {
+        String description
+        editDescription()
+        }
+
+        Class Completion {
+        boolean completion
+        editCompletion()
+        }
+
+        Class DueDate {
+        String dueDate
+        editDueDate()
+        }
+
+        ItemList <|-- Item
+        Item <|-- Description
+        Item <|-- Completion
+        Item <|-- DueDate
+
+        @enduml
